@@ -1,27 +1,27 @@
 #This is a demo workflow file to test github actions
 name: 'Demo Workflow'
-on:
-- push
-- pull_request:
+  on:
+  - push
+  - pull_request:
     - closed
-- schedule: 
+  - schedule: 
     - cron: '* * * * *'
 
-jobs:
+  jobs:
 
-  varalakshmi:
-    name: 'varalakshmi job'
-    runs-on : ubuntu-latest
-    defaults:
-      run:
+    varalakshmi:
+      name: 'varalakshmi job'
+      runs-on : ubuntu-latest
+      defaults:
+        run:
+          shell: bash
+      steps:
+      - name: ping www.googl.com
+        run: ping -c 3 www.google.com
         shell: bash
-    steps:
-    - name: ping www.googl.com
-      run: ping -c 3 www.google.com
-      shell: bash
-    - name: ping www.yahoo.com    
-      run: ping -c 3 www.yahoo.com
-      shell: bash
+      - name: ping www.yahoo.com    
+        run: ping -c 3 www.yahoo.com
+        shell: bash
 
   #vedanshi:
 
