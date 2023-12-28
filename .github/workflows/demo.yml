@@ -2,9 +2,9 @@
 name: 'Demo Workflow'
 on:
 - push
-- pull_request
+- pull_request:
     - closed
-- schedule  
+- schedule: 
     - cron: '* * * * *'
 
 jobs:
