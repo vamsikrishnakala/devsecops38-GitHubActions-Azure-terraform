@@ -24,8 +24,8 @@ jobs:
       run: curl -sL https://ipconfig.io
       shell: bash
     - name: Setup Terraform with Specified version on runner
-       uses: hashicorp/setup-terraform@v2
-       with:
+      uses: hashicorp/setup-terraform@v2
+      with:
          terraform_version: 1.6.6
 
 
