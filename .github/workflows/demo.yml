@@ -9,8 +9,7 @@ on:
  schedule: 
   - cron: '* * * * *'
 
-jobs:
-
+ jobs:
   varalakshmi:
     name: 'varalakshmi job'
     runs-on : ubuntu-latest
