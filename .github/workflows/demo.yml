@@ -2,11 +2,13 @@
 name: 'Demo Workflow'
 on:
  push:
+  branches: [master]
  pull_request:
   types: [closed]
+  branches: [master]
  schedule: 
   - cron: '* * * * *'
-#
+
 jobs:
 
   varalakshmi:
