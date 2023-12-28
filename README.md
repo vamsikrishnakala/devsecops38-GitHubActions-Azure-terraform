@@ -1,2 +1,2 @@
 # devsecops38-GitHubActions-Azure-terraform
-devsecops38-GitHubActions-Azure-terraforms
+devsecops38-GitHubActions-Azure-terraformss
