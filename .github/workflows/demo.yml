@@ -2,8 +2,8 @@
 name: 'Demo Workflow'
 on:
  push:
-# pull_request:
-#  - closed
+ pull_request:
+ types: [closed]
 #- schedule: 
 #   - cron: '* * * * *'
 #
@@ -16,11 +16,11 @@ jobs:
       run:
         shell: bash
     steps:
-    - name: ping www.googl.com
-      run: ping -c 3 www.google.com
+    - name: print Runner Hostname
+      run: hostname
       shell: bash
-    - name: ping www.yahoo.com    
-      run: ping -c 3 www.yahoo.com
+    - name: print Runner IP address
+      run: curl https://ipconfig.io
       shell: bash
 
   #vedanshi:
