@@ -1,8 +1,8 @@
 #This is a demo workflow file to test github actions
 name: 'Demo Workflow'
 on:
-- push:
-#- pull_request:
+ push:
+# pull_request:
 #  - closed
 #- schedule: 
 #   - cron: '* * * * *'
