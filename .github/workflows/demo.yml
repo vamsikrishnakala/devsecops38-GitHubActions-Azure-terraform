@@ -1,6 +1,6 @@
 #This is a demo workflow file to test github actions
 name: 'Demo Workflow'
-  on:
+on:
   - push
   - pull_request:
     - closed
