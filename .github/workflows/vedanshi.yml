@@ -1,4 +1,4 @@
-name: 'Demo Workflow'
+name: 'Vedanshi Workflow'
 on:
  push:
   branches: [master, vara]
