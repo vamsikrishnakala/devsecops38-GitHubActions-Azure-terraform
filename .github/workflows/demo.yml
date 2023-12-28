@@ -3,7 +3,7 @@ name: 'Demo Workflow'
 on:
 - push
 - pull_request
-    types: [closed]
+    - closed
 - schedule  
     -cron: '* * * * *'
 
