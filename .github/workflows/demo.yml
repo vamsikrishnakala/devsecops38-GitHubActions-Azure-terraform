@@ -11,49 +11,49 @@ on:
 
  jobs:
    varalakshmi:
-    name: 'varalakshmi job'
-    runs-on : ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
-    - name: print Runner Hostname
-      run: hostname
-      shell: bash
-    - name: print Runner IP address
-      run: curl -sL https://ipconfig.io
-      shell: bash
-    - name: Setup Terraform with Specified version on runner
-      uses: hashicorp/setup-terraform@v2
-      with:
-        terraform_version: 1.6.6
+     name: 'varalakshmi job'
+     runs-on : ubuntu-latest
+     defaults:
+       run:
+         shell: bash
+     steps:
+     - name: print Runner Hostname
+       run: hostname
+       shell: bash
+     - name: print Runner IP address
+       run: curl -sL https://ipconfig.io
+       shell: bash
+     - name: Setup Terraform with Specified version on runner
+       uses: hashicorp/setup-terraform@v2
+       with:
+         terraform_version: 1.6.6
 
-   vedanshi:
-      name: 'vedanshi job'
-    runs-on : ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
-    - name: print Runner Hostname
-      run: hostname
-      shell: bash
-    - name: print Runner IP address
-      run: curl -sL https://ipconfig.io
-      shell: bash
-
-  
-
-   vishwak:
-      name: 'vishwak job'
-    runs-on : ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-    steps:
-    - name: print Runner Hostname
-      run: hostname
-      shell: bash
-    - name: print Runner IP address
-      run: curl -sL https://ipconfig.io
-      shell: bash
+  # vedanshi:
+  #    name: 'vedanshi job'
+  #  runs-on : ubuntu-latest
+  #  defaults:
+  #    run:
+  #      shell: bash
+  #  steps:
+  #  - name: print Runner Hostname
+  #    run: hostname
+  #    shell: bash
+  #  - name: print Runner IP address
+  #    run: curl -sL https://ipconfig.io
+  #    shell: bash
+#
+  #
+#
+#vishwak:
+#   name: 'vishwak job'
+# runs-on : ubuntu-latest
+# defaults:
+#   run:
+#     shell: bash
+# steps:
+# - name: print Runner Hostname
+#   run: hostname
+#   shell: bash
+# - name: print Runner IP address
+#   run: curl -sL https://ipconfig.io
+#   shell: bash
