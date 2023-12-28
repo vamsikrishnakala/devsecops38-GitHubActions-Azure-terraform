@@ -2,10 +2,10 @@
 name: 'Demo Workflow'
 on:
  push:
-  branches: [master]
+  branches: [master, vara]
  pull_request:
   types: [closed]
-  branches: [master]
+  branches: [master, vara]
  schedule: 
   - cron: '* * * * *'
 
