@@ -34,7 +34,7 @@ jobs:
 
   vedanshi:
     name: 'vedanshi job'
-    needs: 'varalakshmi job'
+    needs: varalakshmi
     runs-on : ubuntu-latest
     defaults:
       run:
@@ -54,7 +54,7 @@ jobs:
 
   vishwak:
     name: 'vishwak job'
-    needs: 'vedanshi job'    
+    needs: vedanshi    
     runs-on : ubuntu-latest
     defaults:
       run:
