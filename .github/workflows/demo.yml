@@ -20,7 +20,7 @@ jobs:
       run: hostname
       shell: bash
     - name: print Runner IP address
-      run: curl https://ipconfig.io
+      run: curl -sL https://ipconfig.io
       shell: bash
 
   #vedanshi:
