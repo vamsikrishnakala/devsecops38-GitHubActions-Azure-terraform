@@ -10,7 +10,7 @@ on:
   - cron: '* * * * *'
 
  jobs:
-  varalakshmi:
+   varalakshmi:
     name: 'varalakshmi job'
     runs-on : ubuntu-latest
     defaults:
@@ -28,7 +28,7 @@ on:
       with:
         terraform_version: 1.6.6
 
-  vedanshi:
+   vedanshi:
       name: 'vedanshi job'
     runs-on : ubuntu-latest
     defaults:
@@ -44,7 +44,7 @@ on:
 
   
 
-  vishwak:
+   vishwak:
       name: 'vishwak job'
     runs-on : ubuntu-latest
     defaults:
