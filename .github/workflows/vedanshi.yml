@@ -1,12 +1,17 @@
 name: 'Vedanshi Workflow'
 on:
- push:
-  branches: [master, vara]
- pull_request:
-  types: [closed]
-  branches: [master, vara]
-# schedule: # cron will only run with default or base branch
-#  - cron: '* * * * *'
+  workflow_run:
+  workflows: ["Varalakshmi Workflow"]
+  branches: [master]
+  types:
+    - completed
+# push:
+#  branches: [master, vara]
+# pull_request:
+#  types: [closed]
+#  branches: [master, vara]
+## schedule: # cron will only run with default or base branch
+##  - cron: '* * * * *'
 env:
   ENVIRONMENT: "Development"
   ARM_SUBSCRIPTION_ID: ${{secrets.ARM_SUBSCRIPTION_ID}}

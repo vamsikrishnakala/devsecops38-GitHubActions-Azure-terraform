@@ -1,10 +1,15 @@
 name: 'Vishwak Workflow'
 on:
- push:
-  branches: [master, vara]
- pull_request:
-  types: [closed]
-  branches: [master, vara]
+  workflow_run:
+  workflows: ["Vedanshi Workflow"]
+  branches: [master]
+  types:
+    - completed
+# push:
+#  branches: [master, vara]
+# pull_request:
+#  types: [closed]
+#  branches: [master, vara]
 # schedule: # cron will only run with default or base branch
 #  - cron: '* * * * *'
 env:
