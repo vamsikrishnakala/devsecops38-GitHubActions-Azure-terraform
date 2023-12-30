@@ -15,9 +15,9 @@ on:
       required: true
       default: 'Development'
       type: choice
-      option:
+      options:
       - free_trail
-      -
+      
 env:
   ENVIRONMENT: "Development"
   ARM_SUBSCRIPTION_ID: ${{secrets.ARM_SUBSCRIPTION_ID}}
