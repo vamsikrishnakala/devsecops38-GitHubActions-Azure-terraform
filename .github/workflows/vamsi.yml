@@ -36,6 +36,8 @@ jobs:
       run:
         shell: bash
     steps:
+    - name: checkout
+      uses: actions/checkout@v3    
     - name: print Runner Hostname
       run: hostname
       shell: bash
