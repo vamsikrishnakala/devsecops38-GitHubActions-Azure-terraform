@@ -1,7 +1,6 @@
 name: 'vamsi Workflow'
 on:
   workflow_dispatch:
-  workflow_run:
    inputs:
     TERRAFORM_DESTROY:
       description: 'Shall we Run Terraform Destroy ?'
