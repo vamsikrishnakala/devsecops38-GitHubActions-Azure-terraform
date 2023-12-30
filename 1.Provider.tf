@@ -5,6 +5,7 @@ terraform {
       version = "=3.85.0"
     }
 }
+}
 terraform {
   backend "azurerm" {
     resource_group_name  = "varalakshmi-rg"
