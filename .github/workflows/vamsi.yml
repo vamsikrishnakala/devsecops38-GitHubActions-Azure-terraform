@@ -19,6 +19,7 @@ on:
       - free_trail
       
 env:
+  TERRAFORM_DES: "YES"
   ENVIRONMENT: "Development"
   ARM_SUBSCRIPTION_ID: ${{secrets.ARM_SUBSCRIPTION_ID}}
   ARM_CLIENT_ID: ${{secrets.ARM_CLIENT_ID}}
@@ -47,7 +48,13 @@ jobs:
          terraform_version: 1.6.6
     - name: check terraform version
       run: terraform version
-      shell: bash         
+      shell: bash     
+    - name: check Env version
+      shell: bash     
+      run: |
+      echo ${{ENVIRONMENT}}    
+      echo ${{TERRAFORM_DESTROY}}
+
 
 
   vedanshi:
