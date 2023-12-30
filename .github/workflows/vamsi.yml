@@ -70,11 +70,12 @@ jobs:
       run: |
        export ARM_SUBSCRIPTION_ID='3cf019f3-f4ce-4a58-9267-7ea16b45d46c'
        terraform plan  
-       terraform import azurerm_resource_group.varalakshmi-rg /subscriptions/3cf019f3-f4ce-4a58-9267-7ea16b45d46c/resourceGroups/varalakshmi-rg"  
+       
     - name: Perform terraform apply
       shell: bash     
       run: |
        export ARM_SUBSCRIPTION_ID='3cf019f3-f4ce-4a58-9267-7ea16b45d46c'
+       terraform import azurerm_resource_group.varalakshmi-rg /subscriptions/3cf019f3-f4ce-4a58-9267-7ea16b45d46c/resourceGroups/varalakshmi-rg"  
        terraform apply --auto-approve    
     - name: List terraform Resources
       shell: bash     
