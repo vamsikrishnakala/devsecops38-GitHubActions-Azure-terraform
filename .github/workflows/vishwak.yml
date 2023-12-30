@@ -1,11 +1,11 @@
-name: 'Varalakshmi Workflow'
+name: 'Vishwak Workflow'
 on:
  push:
   branches: [master, vara]
  pull_request:
   types: [closed]
   branches: [master, vara]
-# schedule: 
+# schedule: # cron will only run with default or base branch
 #  - cron: '* * * * *'
 env:
   ENVIRONMENT: "Development"

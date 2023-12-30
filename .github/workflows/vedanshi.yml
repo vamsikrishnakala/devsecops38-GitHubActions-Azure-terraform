@@ -5,8 +5,8 @@ on:
  pull_request:
   types: [closed]
   branches: [master, vara]
- schedule: 
-  - cron: '* * * * *'
+# schedule: # cron will only run with default or base branch
+#  - cron: '* * * * *'
 env:
   ENVIRONMENT: "Development"
   ARM_SUBSCRIPTION_ID: ${{secrets.ARM_SUBSCRIPTION_ID}}
