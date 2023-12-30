@@ -1,14 +1,15 @@
-name: 'vamsi Workflow'
+name: 'vamsi push Workflow'
 on:
   workflow_dispatch:
    inputs:
-    TERRAFORM_DESTROY:
+    TERRAFORM:
       description: 'Shall we Run Terraform Destroy ?'
       required: true
-      defautlt: 'DONT DESTORY'
+      defautlt: 'PLAN'
       type: choice
       options:
-      - DONT_DESTROY
+      - PLAN
+      - APPLY
       - DESTROY
     ENVIRONMENT:
       description: 'Select which Subscription You Wan to Deploy?'  
@@ -67,7 +68,7 @@ jobs:
        export ARM_SUBSCRIPTION_ID='3cf019f3-f4ce-4a58-9267-7ea16b45d46c'
        terraform init && terraform validate && terraform fmt
     - name: Perform Terraform Plan
-      if: steps.init.exit_code == 0
+      if: steps.init.exit_code == 0 && ${{github.event.inputs.TERRAFORM == 'PLAN'}}
       id: plan
       shell: bash     
       run: |
@@ -80,7 +81,7 @@ jobs:
 #       terraform import azurerm_resource_group.varalakshmi-rg "/subscriptions/3cf019f3-f4ce-4a58-9267-7ea16b45d46c/resourceGroups/varalakshmi-rg"
 #
     - name: Perform terraform apply
-      if: steps.plan.plan.exit_code == 0
+      if: steps.plan.plan.exit_code == 0 && ${{github.event.inputs.TERRAFORM == 'APPLY'}}
       id: apply
       shell: bash     
       run: |
