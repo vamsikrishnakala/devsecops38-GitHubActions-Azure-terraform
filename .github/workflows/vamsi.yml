@@ -52,14 +52,14 @@ jobs:
     - name: check Env version
       shell: bash     
       run: |
-      echo ${{ENVIRONMENT}}    
-      echo ${{TERRAFORM_DESTROY}}
+       echo ${{ENVIRONMENT}}    
+       echo ${{TERRAFORM_DESTROY}}
 
 
 
   vedanshi:
     name: 'vedanshi job'
-    needs: varalakshmi
+
     runs-on : ubuntu-latest
     defaults:
       run:
@@ -79,7 +79,7 @@ jobs:
 
   vishwak:
     name: 'vishwak job'
-    needs: vedanshi    
+      
     runs-on : ubuntu-latest
     defaults:
       run:
