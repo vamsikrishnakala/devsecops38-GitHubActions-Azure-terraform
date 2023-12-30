@@ -59,6 +59,7 @@ jobs:
       shell: bash  
 
     - name: Perform Terraform INit Validate Format
+      id: init
       shell: bash     
       run: |
        echo ${{github.event.inputs.ENVIRONMENT}}    
@@ -66,6 +67,8 @@ jobs:
        export ARM_SUBSCRIPTION_ID='3cf019f3-f4ce-4a58-9267-7ea16b45d46c'
        terraform init && terraform validate && terraform fmt
     - name: Perform Terraform Plan
+      if: steps.init.exit_code == 0
+      id: plan
       shell: bash     
       run: |
        export ARM_SUBSCRIPTION_ID='3cf019f3-f4ce-4a58-9267-7ea16b45d46c'
@@ -77,11 +80,15 @@ jobs:
 #       terraform import azurerm_resource_group.varalakshmi-rg "/subscriptions/3cf019f3-f4ce-4a58-9267-7ea16b45d46c/resourceGroups/varalakshmi-rg"
 #
     - name: Perform terraform apply
+      if: steps.plan.plan.exit_code == 0
+      id: apply
       shell: bash     
       run: |
        export ARM_SUBSCRIPTION_ID='3cf019f3-f4ce-4a58-9267-7ea16b45d46c'
        terraform apply --auto-approve    
     - name: List terraform Resources
+      if: success()
+     
       shell: bash     
       run: |
        export ARM_SUBSCRIPTION_ID='3cf019f3-f4ce-4a58-9267-7ea16b45d46c'
