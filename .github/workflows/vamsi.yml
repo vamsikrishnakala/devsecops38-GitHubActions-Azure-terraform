@@ -81,7 +81,7 @@ jobs:
 #       terraform import azurerm_resource_group.varalakshmi-rg "/subscriptions/3cf019f3-f4ce-4a58-9267-7ea16b45d46c/resourceGroups/varalakshmi-rg"
 #
     - name: Perform terraform apply
-      if: steps.plan.plan.exit_code == 0 && ${{github.event.inputs.TERRAFORM == 'APPLY'}}
+      if: steps.init.exit_code == 0 && ${{github.event.inputs.TERRAFORM == 'APPLY'}}
       id: apply
       shell: bash     
       run: |
