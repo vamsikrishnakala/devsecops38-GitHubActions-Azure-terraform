@@ -11,13 +11,13 @@ on:
       - DONT_DESTROY
       - DESTROY
     ENVIRONMENT:
-      description: ' Select which Subscription You Wan to Deploy?'  
+      description: 'Select which Subscription You Wan to Deploy?'  
       required: true
-      default: ' Development'
+      default: 'Development'
       type: choice
       option:
-      - Development
-      - Production
+      - free_trail
+      -
 env:
   ENVIRONMENT: "Development"
   ARM_SUBSCRIPTION_ID: ${{secrets.ARM_SUBSCRIPTION_ID}}
