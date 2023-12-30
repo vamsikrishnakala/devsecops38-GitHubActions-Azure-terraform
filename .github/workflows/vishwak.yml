@@ -1,10 +1,10 @@
 name: 'Vishwak Workflow'
 on:
   workflow_run:
-  workflows: ["Vedanshi Workflow"]
-  branches: [master]
-  types:
-    - completed
+   workflows: ["Vedanshi Workflow"]
+    branches: [master]
+    types:
+      - completed
 # push:
 #  branches: [master, vara]
 # pull_request:
